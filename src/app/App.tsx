@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from "react";
 import "./App.css";
 import { TodolistsList } from "features/TodolistsList/TodolistsList";
-import { ErrorSnackbar } from "components/ErrorSnackbar/ErrorSnackbar";
+import { ErrorSnackbar } from "common/components/ErrorSnackbar/ErrorSnackbar";
 import { useDispatch, useSelector } from "react-redux";
 import { AppRootStateType } from "./store";
 import { initializeAppTC, RequestStatusType } from "./app-reducer";
@@ -19,8 +19,6 @@ import {
   Typography,
 } from "@mui/material";
 import { Menu } from "@mui/icons-material";
-// import { isLoadingSelector } from "app/app.selector";
-import { RootState } from "@reduxjs/toolkit/dist/query/core/apiState";
 import { isLoggedInSelector } from "app/app.selector";
 
 type PropsType = {

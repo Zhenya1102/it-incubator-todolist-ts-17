@@ -1,10 +1,10 @@
-// import { setAppStatusAC } from "app/app-reducer";
-import { authAPI, LoginParamsType } from "api/todolists-api";
-import { handleServerAppError, handleServerNetworkError } from "utils/error-utils";
+import { handleServerNetworkError } from "common/utils/handleServerNetworkError";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AppThunk } from "app/store";
 import { appAction } from "app/app-reducer";
 import { todolistsAction } from "features/TodolistsList/todolists-reducer";
+import { handleServerAppError } from "common/utils/handleServerAppError";
+import { authAPI, LoginParamsType } from "features/Login/authApi";
 
 const slice = createSlice({
   name: "auth",
